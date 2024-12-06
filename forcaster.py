@@ -12,8 +12,8 @@ pipeline = ChronosPipeline.from_pretrained(
 )
 
 # Load the sine data
-filename = "sin_data.xlsx"
-df = pd.read_excel(filename, engine="openpyxl")
+filename = "sin_data.csv"
+df = pd.read_csv(filename)
 
 # Prepare the context for prediction
 context = torch.tensor(df["Sin(X)"])
