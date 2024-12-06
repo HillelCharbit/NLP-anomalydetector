@@ -63,6 +63,12 @@ for i in median_rounded:
     y_column.append(median[y_median_index])
 
 
+# now create the y column using the median values
+
+y_scatter = []
+
+
+
 # Plot the results
 plt.figure(figsize=(8, 4))
 plt.plot(last_50_index, last_50_data, color="royalblue", label="Last 50 historical data")
