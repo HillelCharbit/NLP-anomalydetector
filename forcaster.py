@@ -14,6 +14,8 @@ pipeline = ChronosPipeline.from_pretrained(
 # Load the delta t data
 filename_delta_t = "sin_data2.csv"
 df_delta_t = pd.read_csv(filename_delta_t)
+df_delta_t = df_delta_t.dropna().reset_index(drop=True)
+print(df_delta_t.head())
 
 # Prepare the context for prediction
 context_delta_t = torch.tensor(df_delta_t["Difference"])
