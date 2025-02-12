@@ -1,0 +1,24 @@
+flowchart TB
+    A[["Input Labeled Dataset"]] --> B{{"Train/Test Split"}}
+    
+    B --> C["Training Data"]
+    B --> D["Test Data"]
+    
+    C --> E["Raw Data Path"]
+    C --> F["Pre-processed Path"]
+    
+    E & F --> G["Chronos Forecaster"]
+    
+    G --> H["Time Series Forecast"]
+    G --> I["Direct Anomaly Forecast"]
+    
+    H --> J["In-sample Detection"]
+    J --> K["SOTA Anomaly Detection"]
+    
+    I & K --> L["Prediction Evaluation"]
+    D --> L
+    
+    classDef default fill:#ffffff,stroke:#333,stroke-width:1px
+    classDef input fill:#f5f5f5,stroke:#333,stroke-width:2px
+    classDef process fill:#ffffff,stroke:#333,stroke-width:1px
+    classDef split fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5

@@ -1,0 +1,21 @@
+digraph {
+	A [label="INPUT LABELED DATASET" fillcolor=lightblue shape=box style=filled]
+	B1 [label="Time Series (Subset 1)" shape=box]
+	B2 [label="Time Series (Subset 2)" shape=box]
+	C [label="COMPARE PREDICTIONS" fillcolor=lightgray shape=box style=filled]
+	D [label="FORECASTER CHRONOS" fillcolor=lightyellow shape=box style=filled]
+	E [label="Prediction [X, Y, Z]" fillcolor=lightgreen shape=box style=filled]
+	F [label="S.O.A MODEL" fillcolor=lightcoral shape=box style=filled]
+	G [label="Final Output {X1, Y1, Z1}" fillcolor=lightblue shape=box style=filled]
+	A -> B1 [label=Split]
+	A -> B2 [label=Split]
+	B1 -> C
+	B2 -> C
+	C -> E [label=Compare]
+	B1 -> D [label=3]
+	B2 -> D [label=4]
+	D -> E [label=Prediction]
+	E -> C
+	D -> F [label="In Sample"]
+	F -> G
+}
