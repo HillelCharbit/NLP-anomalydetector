@@ -2,6 +2,8 @@ name: normlization_adaptation
 channels:
   - defaults
 dependencies:
+  - pip  
+  - ipykernel
   - pip:
       - accelerate
       - datasets

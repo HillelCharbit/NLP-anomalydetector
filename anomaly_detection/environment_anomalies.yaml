@@ -2,6 +2,8 @@ name: anomaly_detection
 channels:
   - defaults
 dependencies:
+  - pip  
+  - ipykernel
   - pip:
       - chronos-forecasting
       - numpy
@@ -10,4 +12,3 @@ dependencies:
       - pyod
       - seaborn
       - yfinance==0.2.37
-
