@@ -1,0 +1,22 @@
+name: normlization_adaptation
+channels:
+  - defaults
+dependencies:
+  - pip:
+      - accelerate
+      - datasets
+      - gluonts
+      - joblib
+      - numpy
+      - matplotlib
+      - pandas      
+      - scikit-learn
+      - seaborn
+      - tensorboard
+      - torch
+      - torch-tb-profiler
+      - torchmetrics
+      - torchvision
+      - transformers
+      - tqdm
+      - typer

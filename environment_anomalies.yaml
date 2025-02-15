@@ -1,0 +1,13 @@
+name: anomaly_detection
+channels:
+  - defaults
+dependencies:
+  - pip:
+      - chronos-forecasting
+      - numpy
+      - matplotlib
+      - pandas
+      - pyod
+      - seaborn
+      - yfinance==0.2.37
+
