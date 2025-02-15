@@ -42,7 +42,9 @@ Activate the environment:
 
 ### Anomaly Detection
 
-Use the suggested datasets or any binary labeled anomaly time series CSV file. 
+In order to use the future anomaly detection pipeline you can run the `anomaly_detection/structured_pipeline.iphynb` notebook. It is possible to use the suggested stock datasets or any binary labeled anomaly time series CSV file. 
+
+The following hyperparameters can be adjusted: The predictive window, the model size, size of context(historical data).
 
 ### Normalization Techniques
 
