@@ -28,28 +28,41 @@ For details on the training data and procedures, and experimental results, pleas
 
 If you're interested reproduce our experiments clone and install the environments from source:
 
-# Clone the repository
-git clone https://github.com/HillelCharbit/NLP-anomalydetector.git
+Clone the repository:
+```$ git clone https://github.com/HillelCharbit/NLP-anomalydetector.git```
 
+
+Before running the evaluations, it is needed to install the required packages using conda. Therefore, we provide an environment yaml file in each of the folders.
+Use the following command to create the environment:
+```$ conda env create -f environment_name.yaml```
+
+Activate the environment:
+```$ conda activate environment_name```
 
 ### Anomaly Detection
+
+TODO
+
 ### Normalization Techniques
 
-## :floppy_disk: Datasets
+The normalization_adaptation folder contains all scripts and notebooks to reporduce the code of the normalization technique modification of Chronos
 
-Datasets used in the Chronos paper for pretraining and evaluation that we used in this project are available through the HuggingFace repos: [`autogluon/chronos_datasets`](https://huggingface.co/datasets/autogluon/chronos_datasets) and [`autogluon/chronos_datasets_extra`](https://huggingface.co/datasets/autogluon/chronos_datasets_extra). Check out these repos for instructions on how to download and use the datasets.
+#### Training
 
-## 🔥 Coverage
+For training, we refer to the  `README.md` found in  `chronos-forecasting/scripts`. Also many additional details can be found in the [GitHub repo of Chronos](https://github.com/amazon-science/chronos-forecasting/tree/main).
 
-- ["Chronos: Learning the Language of Time Series"](https://arxiv.org/abs/2403.07815) 
-- [Abnormality Forecasting: Time Series Anomaly Prediction via Future Context Modeling](https://arxiv.org/pdf/2410.12206v1)
+Additionally, modify the config files in the same folder for different hyperparameters and changing the tokenizer class for training on the specific normalization technique. 
 
+#### Evaluation
 
+To run the evaluation, use the notebook  `eval_pipeline.ipynb`. Therefore install all needed packages. Either you can create a new conda environment using the environment.yaml or you can install the package `chronos-forecasting` using your favorite package manager and then uninstalling it again. The uninstall keeps all packages but Chronos itself, as we are using the locally located code which contains the new normalization/tokenization classes. Finally, install the rest of the packages like gluonts, numpy etc. specified in the environment.yaml
 
-## 📝 Citation
+In the pipeline, specify what you want to use (either locally or pretrained, see the **Training** section how to use locally trained models). Also specify the device type (CPU or GPU) and the Tokenizer Class. All these parameters can be specified in the **Global Params** section. Lasty, just run all cells and the evaluation should start. You can see the progress as output of the last cell. The results are written into a csv file where each row represents a dataset and its computed metrics.
 
-If you find this project useful for your research, please consider citing the associated contributers titled in this project.
+#### Modified Code
+
+Next to the evaluation code, the code of the new normalization techniques can be found in ```src/chronos/chronos.py``` inherited from ```ChronosTokenizer```.
 
 ## 📃 License
 
-This project is licensed under the MIT licence. . For more details, please refer to the License file.
+This project is licensed under the MIT license. For more details, please refer to the license file.
