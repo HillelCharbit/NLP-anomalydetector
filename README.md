@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# "Anomaly Forecast: Innovative Techniques for Future Insights and Normalization"
+# Anomaly Forecast: Innovative Techniques for Future Insights and Normalization
 
 </div>
 
