@@ -15,7 +15,8 @@ For details on the training data procedures and experimental results, please ref
 
 
 <p align="center">
-  <img src="https://github.com/HillelCharbit/NLP-anomalydetector/blob/main/anomaly_detection/Pipeline_flowchart.png?raw=true" width="100%">
+ <img src="https://github.com/HillelCharbit/NLP-anomalydetector/blob/main/anomaly_detection/Pipeline_flowchart.png?raw=true" alt="Alt Text" width="300" height="200">
+
   <br />
   <span>
     Fig. 1: Anomaly Detection Pipeline Overview. The process begins with an input-labeled dataset, which is split into training and test sets. The training data follows two paths: raw and pre-processed. The Chronos Forecaster is applied to both paths. For the pre-processed data, it directly forecasts anomalies. For the unprocessed data, it first performs a time series forecast, followed by state-of-the-art (SOTA) anomaly detection. Both approaches lead to prediction evaluation, which is then compared against the test data for validation.
