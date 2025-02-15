@@ -57,6 +57,16 @@ Additionally, modify the config files in the same folder for different hyperpara
 
 To run the evaluation, use the notebook  `eval_pipeline.ipynb`. In the pipeline, specify what you want to use (either locally or pretrained, see the **Training** section how to use locally trained models). Also specify the device type (CPU or GPU) and the Tokenizer Class. All these parameters can be specified in the **Global Params** section. Lasty, just run all cells and the evaluation should start. You can see the progress as output of the last cell. The results are written into a csv file where each row represents a dataset and its computed metrics.
 
+The following pretrained models are available:
+
+| Model                                                                  | Parameters | Based on                                                               |
+| ---------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------- |
+| [**chronos-t5-tiny**](https://huggingface.co/amazon/chronos-t5-tiny)   | 8M         | [t5-efficient-tiny](https://huggingface.co/google/t5-efficient-tiny)   |
+| [**chronos-t5-mini**](https://huggingface.co/amazon/chronos-t5-mini)   | 20M        | [t5-efficient-mini](https://huggingface.co/google/t5-efficient-mini)   |
+| [**chronos-t5-small**](https://huggingface.co/amazon/chronos-t5-small) | 46M        | [t5-efficient-small](https://huggingface.co/google/t5-efficient-small) |
+| [**chronos-t5-base**](https://huggingface.co/amazon/chronos-t5-base)   | 200M       | [t5-efficient-base](https://huggingface.co/google/t5-efficient-base)   |
+| [**chronos-t5-large**](https://huggingface.co/amazon/chronos-t5-large) | 710M       | [t5-efficient-large](https://huggingface.co/google/t5-efficient-large) |
+
 #### Modified Code
 
 Next to the evaluation code, the code of the new normalization techniques can be found in ```src/chronos/chronos.py``` inherited from ```ChronosTokenizer```.
