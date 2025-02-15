@@ -13,7 +13,6 @@ This project builds upon ["Chronos: Learning the Language of Time Series"](https
 
 For details on the training data and procedures, and experimental results, please refer to the project report [Anomaly Forecast: Innovative Techniques for Future Insights and Normalizations]().
 
-(https://arxiv.org/abs/2403.07815).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/HillelCharbit/NLP-anomalydetector/anomaly_detection/Pipeline_flowchart.png" width="100%">
